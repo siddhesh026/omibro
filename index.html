@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>can you open this, Omi Bro!</title>
+    <title>Happy Hug Day, Omi Bro!</title>
     <style>
         /* CSS Variables for easy theming */
         :root {
@@ -27,13 +27,13 @@
             color: var(--text-color);
             padding: 50px;
             margin: 0;
-            min-height: 100vh;
+            min-height: 100vh; /* Keep for centering, but allow scroll */
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             position: relative;
-            overflow: hidden; /* Hide overflowing hearts */
+            overflow-y: auto; /* Allow vertical scrolling if content overflows */
         }
 
         /* Animated background hearts */
@@ -137,14 +137,16 @@
             animation: fadeInUp 1s ease-in;
             text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
             text-align: center;
+            overflow-y: auto; /* Allow scroll inside message if needed */
         }
 
         .message img {
-            max-width: 100%; /* Responsive images */
+            max-width: 100%; /* Fully responsive */
             height: auto;
             margin: 10px 0;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            display: block; /* Ensure images are visible as blocks */
         }
 
         @keyframes fadeInUp {
@@ -189,7 +191,7 @@
     </div>
     <div class="message" id="hugMessage">
         Yay! Here's a virtual hug: 🤗❤️<br>
-        <img src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExMDByN2djZWlta2Z2ZW5oNjBpN251Y2NraTFlZTUxOWdhdjMyYnRuaSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/llmZp6fCVb4ju/giphy.gif" alt="Hug GIF" style="width: 300px;"><br>
+        <img src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExMDByN2djZWlta2Z2ZW5oNjBpN251Y2NraTFlZTUxOWdhdjMyYnRuaSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/llmZp6fCVb4ju/giphy.gif" alt="Hug GIF" alt="Hug GIF" style="width: 300px;"><br>
         <img src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExNjMwZ3piNXE2c2UxMWY5Mzh3NnZlc3JnOGs4a2lzZGd0dDcxdTk0MSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/ZBQhoZC0nqknSviPqT/giphy.gif" alt="Happy Hug Photo" style="width: 300px;">
     </div>
 
@@ -215,6 +217,4 @@
         });
     </script>
 </body>
-
 </html>
-
